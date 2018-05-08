@@ -11,6 +11,12 @@ import json
 import os
 print(os.listdir("input"))
 
+def get_key(key):
+    try:
+        return int(key)
+    except ValueError:
+        return key
+
 # Any results you write to the current directory are saved as output.
 def multi_label(path):
     dic = {}
@@ -29,7 +35,9 @@ def multi_label(path):
         for j in i["labelId"]:
             tmp[int(j)-1] = 1
         dic[i["imageId"]] = tmp
-    for key, labels in dic.items():
+    for key, labels in sorted(dic.items(), key = lambda t: get_key(t[0])):
+        print(key)
+        print(labels)
         ids.append(key)
         binary_labels.append(labels)
     ids = np.array(ids)
@@ -40,4 +48,5 @@ def multi_label(path):
     return ids, binary_labels
 
 i, l = multi_label("input/validation.json")
+print(i[27])
 #max_train = multi_label("input/train.json", "train_label.json")
