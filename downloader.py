@@ -46,10 +46,16 @@ def parse_dataset(_dataset, _outdir, _num):
         if (num):
             ids = numpy.random.choice(len(data["images"]), num, replace=False)
             print("Downloading {} random images out of {}:".format(num,len(data["images"])))
-            for i in range(len(ids)):
-                url = data["images"][ids[i]]["url"]
-                fname = os.path.join(outdir, "{}.jpg".format(data["images"][ids[i]]["imageId"]))
-                _fnames_urls.append((fname, url))
+            with open(outdir + 'subset.json', 'w') as outfile:
+                newlist = {}
+                newlist["images"] = []
+                newlist["annotations"] = []
+                for id in ids:
+                    url = data["images"][id]["url"]
+                    fname = os.path.join(outdir, "{}.jpg".format(data["images"][id]["imageId"]))
+                    _fnames_urls.append((fname, url))
+                    newlist["annotations"].append(data["annotations"][id])
+                json.dump(newlist, outfile)
         else:
             for image in data["images"]:
                 url = image["url"]
