@@ -9,8 +9,8 @@ Submission for iMaterialist Challenge (Fashion) on Kaggle
 4. Click on "All resources" in the left sidebar and select "blocksquad". In the new window, you can click on "Start" or "Stop" depending on what you want to do with the server. The public IP of the server is also there.
 5. When the server is running, you can ssh into it. Open terminal and type `ssh blocksquad@<public ip>`, where "\<public ip\>" is the public IP address of the server. Use the password we posted on Facebook.
 6. Always use the "lsda" virtual environment (otherwise some stuff may not work). Type: `source lsda/bin/activate`.
-7. To run the jupyter notebook, type `./jupyter.sh`. The go to http://\<public ip\>:8888 and user the same password to login.
-8. After you finished working on the server, remember to stop it via Azure's dashboard.
+7. To run the jupyter notebook, type `./jupyter.sh`. The go to http://\<public ip\>:8888 and use the same password to login.
+8. After you finished working on the server, stop it via Azure's dashboard.
 
 ## Links
 
