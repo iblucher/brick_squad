@@ -1,6 +1,6 @@
 import glob
 import numpy as np
-from PIL import Image 
+from PIL import Image
 
 # get list of files
 filelist = glob.glob('samples/*.jpg')
@@ -20,3 +20,10 @@ x_multidim = np.array([np.array(image) for image in images_resized])
 x = x_multidim.reshape(n_samples, -1)
 # print(x.shape)
 # print(x)
+
+# store numpy array as txt file
+np.savetxt('data.txt', x, fmt='%d')
+
+# load data 
+# x = np.loadtxt('data.txt', dtype=int)
+# print(x.shape)
