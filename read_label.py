@@ -36,17 +36,14 @@ def multi_label(path):
             tmp[int(j)-1] = 1
         dic[i["imageId"]] = tmp
     for key, labels in sorted(dic.items(), key = lambda t: get_key(t[0])):
-        print(key)
-        print(labels)
+        #print(key)
+        #print(labels)
         ids.append(key)
         binary_labels.append(labels)
     ids = np.array(ids)
     binary_labels = np.array(binary_labels)
-    print(ids.shape)
-    print(binary_labels.shape)
 
     return ids, binary_labels
 
-i, l = multi_label("input/validation.json")
-print(i[27])
+#i, l = multi_label("input/validation.json")
 #max_train = multi_label("input/train.json", "train_label.json")
