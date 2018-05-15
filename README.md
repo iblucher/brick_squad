@@ -18,3 +18,4 @@ Submission for iMaterialist Challenge (Fashion) on Kaggle
 2. [ML-KNN: A lazy learning approach to multi-label learning
 ](https://drive.google.com/file/d/1XX1ezSDiqpJzVr9sNEU69zaRPzzs4TRW/view?usp=sharing)
 3. [Choosing the right estimator (scikit-learn cheet-sheet)](http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html)
+4. [Image recognition with TensorFlow](https://www.tensorflow.org/tutorials/image_recognition)
