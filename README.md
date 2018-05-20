@@ -21,3 +21,4 @@ Submission for iMaterialist Challenge (Fashion) on Kaggle
 4. [Image recognition with TensorFlow](https://www.tensorflow.org/tutorials/image_recognition)
 5. [Guide To Multi-Class Multi-Label Classification With Neural Networks In Python](https://www.depends-on-the-definition.com/guide-to-multi-label-classification-with-neural-networks/)
 6. [Presentation](https://docs.google.com/presentation/d/1GBF87OpmZdDUJl50Kt9UzYCB-ZO0n34FSkzwesbPV1w/edit?usp=sharing)
+7. [Multi-label image classification with Inception net](https://towardsdatascience.com/multi-label-image-classification-with-inception-net-cbb2ee538e30)
